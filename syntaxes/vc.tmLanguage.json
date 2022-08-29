@@ -52,7 +52,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric.vc",
-					"match": "[0-9]+|\\b(NONE|INFINITY|FALSE|TRUE)\\b"
+					"match": "[0-9]+|\\b(true|false|viv)\\b"
 				}
 			]
 		},
