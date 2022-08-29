@@ -1,0 +1,118 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "vc",
+	"scopeName": "source.vc",
+	"patterns": [
+		{
+			"include": "#operators"
+		},
+		{
+			"include": "#brackets"
+		},
+		{
+			"include": "#numbers"
+		},
+		{
+			"include": "#strings"
+		},
+		{
+			"include": "#function"
+		},
+		{
+			"include": "#comments"
+		},
+		{
+			"include": "#inbuilts"
+		},
+		{
+			"include": "#variables"
+		},
+		{
+			"include": "#struct_key"
+		}
+	],
+	"repository": {
+		"operators": {
+			"patterns": [
+				{
+					"name": "keyword.control.vc",
+					"match": "([+/%^*.><≥≤=&|!-]|\\[|\\])"
+				}
+			]
+		},
+		"brackets": {
+			"patterns": [
+				{
+					"name": "keyword.operator.vc",
+					"match": "(\\(|\\)|{|})"
+				}
+			]
+		},
+		"numbers": {
+			"patterns": [
+				{
+					"name": "constant.numeric.vc",
+					"match": "[0-9]+|\\b(NONE|INFINITY|FALSE|TRUE)\\b"
+				}
+			]
+		},
+		"strings": {
+			"name": "string.quoted.double.vc",
+			"begin": "\"",
+			"end": "\"",
+			"patterns": [
+				{
+					"name": "constant.character.escape.vc",
+					"match": "\\\\."
+				}
+			]
+		},
+		"comments": {
+			"patterns": [
+				{
+					"name": "comment.vc",
+					"match": "#.*\n"
+				}
+			]
+		},
+		"inbuilts": {
+			"patterns": [
+				{
+					"name": "keyword.control.vc",
+					"match": "\\b(accept|cd|close|decode|defer|do|encode|env|exec|for|func|help|if|int|listen|log|ls|open|pid|ping|port|printf|pwd|raise|random|read|schema|script|seed|shell|shift|signal|sleep|spawn|strict|template|time|timeout|try|udp_sender|unordered|wait|while|write)\\b"
+				}
+			]
+		},
+		"variables": {
+			"patterns": [
+				{
+					"name": "variable.vc",
+					"match": "\\$\\S*"
+				}
+			]
+		},
+		"struct_key": {
+			"patterns": [
+				{
+					"name": "entity.other.attribute-name.vc",
+					"match": ".*\\:"
+				}
+			]
+		},
+		"function": {
+			"patterns": [
+				{
+					"match": "\\b(FUNCTION)\\s([[:alpha:]]+)\\(",
+					"captures": {
+						"1": {
+							"name": "entity.name.function.vc"
+						},
+						"2": {
+							"name": "storage.type.vc"
+						}
+					}
+				}
+			]
+		}
+	}
+}

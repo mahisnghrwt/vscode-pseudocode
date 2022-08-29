@@ -1,7 +1,7 @@
 {
-    "name": "vscode-pseudocode",
-    "displayName": "vscode-pseudocode",
-    "description": "Syntax highlighting for pseudocode",
+    "name": "vscode-vc",
+    "displayName": "vscode-vc",
+    "description": "Syntax highlighting for vc",
     "version": "0.0.1",
     "engines": {
         "vscode": "^1.36.0"
@@ -12,21 +12,21 @@
     "contributes": {
         "languages": [
             {
-                "id": "pseudocode",
+                "id": "vc",
                 "aliases": [
-                    "pseudocode"
+                    "vc"
                 ],
                 "extensions": [
-                    ".pseudocode"
+                    ".vc"
                 ],
                 "configuration": "./language-configuration.json"
             }
         ],
         "grammars": [
             {
-                "language": "pseudocode",
-                "scopeName": "source.pseudocode",
-                "path": "./syntaxes/pseudocode.tmLanguage.json"
+                "language": "vc",
+                "scopeName": "source.vc",
+                "path": "./syntaxes/vc.tmLanguage.json"
             }
         ]
     }
